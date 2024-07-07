@@ -1,0 +1,12 @@
+services:
+  aggregator:
+    build: .
+    container_name: content_aggregator
+    volumes:
+      - .:/app
+    networks:
+      - content_net
+
+networks:
+  content_net:
+    driver: bridge
